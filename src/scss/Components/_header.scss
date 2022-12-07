@@ -1,0 +1,163 @@
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  &__container {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &__link {
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__link--fb {
+    width: 11px;
+    height: 20px;
+    background-image: url("../../img/1_header/fb.svg");
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+  }
+
+  &__link--tw {
+    width: 20px;
+    height: 17px;
+    background-image: url("../../img/1_header/tw.svg");
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+  }
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 2px;
+  color: var(--white-color);
+  text-transform: uppercase;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+}
+
+.burger {
+  position: relative;
+  width: 48px;
+  height: 10px;
+
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      background-color: var(--accent-color);
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -150vw;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: var(--neptoon-color);
+  transition: left 1s;
+
+  &-visible{
+    left: 0;
+    transition: left 0.5s;
+  }
+
+  &__close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    &-line{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--white-color);
+      &:first-child{
+        transform: rotate(45deg);
+      }
+      &:last-child{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__nav {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 700;
+    overflow-y: auto;
+  }
+  &__item{
+    transition: right 0.9s;
+  }
+
+  &__link {
+    color: var(--white-color);
+    transition: color 0.3s;
+    &:hover{
+      color: var(--dark-color);
+      transition: color 0.3s;
+    }
+  }
+}
